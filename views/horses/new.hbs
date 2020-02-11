@@ -1,0 +1,25 @@
+{{#if error}}
+    <section class="errors">
+        <p>{{error}}</p>
+    </section>
+{{/if}}
+
+
+<form id="new-horse-form" class="flex flex-row" method="post" action="/horses">
+    <label class="input-group col-1-3">
+        <input id="horse-name" class="input-group-input" type="text" name="name" value="{{horse.name}}">
+        <span class="input-group-label">Name:</span>
+    </label>
+
+    <label class="input-group col-1-3">
+        <input id="horse-age" class="input-group-input" type="text" name="age" value="{{horse.age}}">
+        <span class="input-group-label">Age:</span>
+    </label>
+
+    <label class="input-group col-1-3">
+        <input id="horse-breed" class="input-group-input" type="text" name="breed" value="{{horse.breed}}">
+        <span class="input-group-label">Breed:</span>
+    </label>
+
+    <button type="submit" class="button dark">Add a Horse</button>
+</form>
